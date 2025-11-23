@@ -1,0 +1,72 @@
+cabal-version:   3.0
+name:            tx-building-core
+version:         0.1.0.0
+
+synopsis:        Core transaction building library for Cardano
+description:     A library providing core transaction building functionality for Cardano applications
+homepage:        https://github.com/yourusername/tx-building-core
+license:         Apache-2.0
+license-file:    LICENSE
+author:          Marius Georgescu
+maintainer:      georgescumarius@live.com
+
+category:        System
+build-type:      Simple
+extra-doc-files: CHANGELOG.md README.md
+
+common warnings
+  ghc-options: -Wall
+
+library
+  import:             warnings
+  exposed-modules:
+    TxBuilding.Context
+    TxBuilding.Instances
+    TxBuilding.MonadInteraction
+    TxBuilding.Types
+
+  build-depends:
+    , aeson
+    , base
+    , deriving-aeson
+    , extra
+    , mtl
+    , swagger2
+    , text
+
+  --- Cardano specific dependencies
+  build-depends:      atlas-cardano
+  hs-source-dirs:     src
+  default-language:   GHC2021
+  default-extensions:
+    BangPatterns
+    BlockArguments
+    DataKinds
+    DeriveAnyClass
+    DeriveGeneric
+    DerivingStrategies
+    DerivingVia
+    FlexibleContexts
+    FlexibleInstances
+    GeneralizedNewtypeDeriving
+    ImportQualifiedPost
+    InstanceSigs
+    LambdaCase
+    MultiParamTypeClasses
+    NamedFieldPuns
+    NumericUnderscores
+    OverloadedStrings
+    PatternSynonyms
+    RecordWildCards
+    ScopedTypeVariables
+    StandaloneDeriving
+    TemplateHaskell
+    TupleSections
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    UndecidableInstances
+    ViewPatterns
+
+
+
