@@ -49,9 +49,6 @@ data UserAddresses = UserAddresses
   }
   deriving (Show, Generic, FromJSON, ToJSON, ToSchema)
 
-data ActionType = DelegateToPool | DelegateToDRep | DelegateToPoolAndDRep
-  deriving (Show, Generic)
-  deriving (FromJSON, ToJSON, ToSchema)
 
 data Interaction a
   = Interaction
