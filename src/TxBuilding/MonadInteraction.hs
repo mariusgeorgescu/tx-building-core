@@ -35,7 +35,7 @@ class (MonadIO m) => MonadInteraction actionType txBuildingContext m | m -> acti
         providerCtx
         (usedAddresses userAddresses)
         (changeAddress userAddresses)
-        Nothing
+        (reservedCollateral userAddresses)
         builderMonadSkeleton
 
   mkInteractionUnsignedTx :: Interaction actionType -> m GYTx
