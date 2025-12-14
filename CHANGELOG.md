@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.3.0] - 2025-01-XX
+
+### Changed
+- Disabled 5-ada-only check for reserved collateral in `runTx`, allowing reserved collateral to be used regardless of its value, as per CIP 40 changes
+
 ## [0.1.2.0] - 2025-01-XX
 
 ### Fixed
