@@ -72,7 +72,7 @@ runTx ctx addrs addr collateral skeleton = do
         >>= ( \c ->
                 Just
                   ( getTxOutRefHex c,
-                    True -- Make this as `False` to not do 5-ada-only check for value in this given UTxO to be used as collateral.
+                    False -- Make this as `False` to not do 5-ada-only check for value in this given UTxO to be used as collateral.
                   )
             )
     )
